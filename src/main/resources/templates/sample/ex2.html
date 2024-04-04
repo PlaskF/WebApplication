@@ -12,6 +12,7 @@
 <body>
     <ul>
 <!--        잘 돌아갑니다-->
+<!--        5의 배수일 때만 target 지정-->
         <li th:each="dto, state : ${list}" th:class="${dto.sno % 5 == 0}?'target'">
             [[${state.count}]] : [[${dto}]]
         </li>
