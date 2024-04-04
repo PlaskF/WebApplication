@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>dto</title>
+    <style>
+        .target{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+<!--        잘 돌아갑니다-->
+        <li th:each="dto, state : ${list}" th:class="${dto.sno % 5 == 0}?'target'">
+            [[${state.count}]] : [[${dto}]]
+        </li>
+    </ul>
+==================================================================================
+<!--    <ul>-->
+<!--        <li th:each="dto : ${list}">-->
+<!--&lt;!&ndash;            만약 dto가 5의 배수일 시&ndash;&gt;-->
+<!--            <span th:if="${dto.sno % 5 == 0}" th:text="${'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;' +dto.sno}"></span>-->
+<!--&lt;!&ndash;            만약 dto가 5의 배수가 아니라면&ndash;&gt;-->
+<!--            <span th:unless="${dto.sno % 5 == 0}" th:text="${dto.first}"></span>-->
+<!--        </li>-->
+<!--        <li th:each="dto, state : ${list}" th:text="${dto.sno % 5 == 0}?'***********'+${dto.sno}:${dto.first}">-->
+<!--        </li>-->
+<!--    </ul>-->
+</body>
+</html>
