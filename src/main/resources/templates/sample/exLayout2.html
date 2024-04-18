@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- 현재 레이아웃 내의 ul을 타겟으로 지정-->
+<th:block th:replace="~{/fragments/fragment3::
+target(~{this:: #First}, ~{this:: #Second} )}">
+
+    <ul id="First">
+        <li>사과</li>
+        <li>포도</li>
+        <li>수박</li>
+        <li>참외</li>
+    </ul>
+    <ul id="Second">
+        <li>비비빅</li>
+        <li>누가바</li>
+        <li>캔디바</li>
+        <li>월드콘</li>
+    </ul>
+
+</th:block>
+
+</html>
