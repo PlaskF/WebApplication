@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/layout1::
+setContent(~{this:: content}) }">
+    <th:block th:fragment="content">
+        <h1>한국폴리텍재학 서울정수캠퍼스</h1>
+        <h2>인공지능소프트웨어</h2>
+    </th:block>
+</th:block>
+</html>

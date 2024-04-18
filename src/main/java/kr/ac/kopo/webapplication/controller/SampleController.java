@@ -54,9 +54,12 @@ public class SampleController {
         return "redirect:/sample/ex3";
     }
 
-    @GetMapping({"/ex3", "/exLayout1", "/exLayout2"})
+    @GetMapping({"/ex3", "/exLayout1", "/exLayout2","/exTemplate"})
     public void ex3(){
         log.info("ex3");
+    }
+    public void exLayout1(){
+        log.info("exLayout1");
     }
 
 }
